@@ -1,4 +1,9 @@
+work/
+
 .nextflow.log*
 .nextflow/
+
+.nf-test.log*
+.nf-test/
+
 .git/
-work/
