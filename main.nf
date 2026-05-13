@@ -6,9 +6,9 @@ process RUN_NGS2COUNTS {
     val ngs2counts_executable
 
     output:
-    path "${params.input_folder}/ngs2counts/counts_*"
-    path "${params.input_folder}/ngs2counts/run_metadata.json"
-    path "${params.input_folder}/ngs2counts_version.txt"
+        path "*/ngs2counts/counts_*"
+        path "*/ngs2counts/run_metadata.json"
+        path "*/ngs2counts_version.txt"
 
     script:
     """
