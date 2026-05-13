@@ -3,15 +3,16 @@ process RUN_NGS2COUNTS {
 
     input:
     path input_folder
-    path ngs2counts_executable
+    val ngs2counts_executable
 
     output:
-    // path "counts_*"
+    path "${params.input_folder}/ngs2counts/counts_*"
+    path "${params.input_folder}/ngs2counts/run_metadata.json"
     path "${params.input_folder}/ngs2counts_version.txt"
 
     script:
     """
-    run_ngs2counts.sh "$input_folder" "$ngs2counts_executable"
+    run_ngs2counts.sh $input_folder $ngs2counts_executable
     """
 }
 

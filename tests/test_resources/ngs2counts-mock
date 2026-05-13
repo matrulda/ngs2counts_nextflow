@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+import os
+import json
+import sys
+
+VERSION="ngs2counts-mock"
+
+if len(sys.argv) > 1 and sys.argv[1] in ("-V", "--version"):
+    print(VERSION)
+    sys.exit(0)
+
+if len(sys.argv) < 2:
+    sys.exit(1)
+
+runfolder = sys.argv[1]
+
+outdir = os.path.join(runfolder, "ngs2counts")
+os.makedirs(outdir, exist_ok=True)
+
+for i in range(1, 17):
+    fname = os.path.join(outdir, f"counts_{i}.csv")
+    with open(fname, "w") as f:
+        f.write(f"mock count file {i}\n")
+
+metadata = {
+    "version": "ngs2counts-mock",
+    "files": 16
+}
+
+with open(os.path.join(outdir, "run_metadata.json"), "w") as f:
+    json.dump(metadata, f)

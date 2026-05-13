@@ -4,7 +4,7 @@ This pipeline takes a runfolder and runs ngs2counts on it creating count files w
 ## Usage
 
 ```
-nextflow run main.nf --input_folder --ngs2counts_executable
+nextflow run main.nf --input_folder <path_to_runfolder> --ngs2counts_executable <path_to_ngs2counts_version>
 ```
 
 
@@ -13,7 +13,7 @@ nextflow run main.nf --input_folder --ngs2counts_executable
 When running on Uppmax, use `-profile uppmax`
 
 ## Input
-- `--input_folder <path_to_runfolder`: path to the runfolder for which ngs2counts needs to be run
+- `--input_folder <path_to_runfolder>`: path to the runfolder for which ngs2counts needs to be run
 - `--ngs2counts_executable <path_to_ngs2counts_version>`: path to ngs2counts version to use
 
 ## Output 
