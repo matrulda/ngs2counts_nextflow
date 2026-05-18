@@ -12,7 +12,10 @@ process RUN_NGS2COUNTS {
 
     script:
     """
-    run_ngs2counts.sh $input_folder $ngs2counts_executable
+    run_ngs2counts.sh \
+        $input_folder \
+        $ngs2counts_executable \
+        "--library-mapping '${params.library_mapping}'" : "" }
     """
 }
 
