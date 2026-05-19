@@ -4,17 +4,14 @@ nextflow_process {
     script "main.nf"
     process "RUN_NGS2COUNTS"
 
-    test("Run ngs2counts on an undemultiplexed runfolder.") {
+    test("Run ngs2counts without library-mapping.") {
 
         when {
-            params {
-                // define parameters here. Example:
-                // outdir = "tests/results"
-            }
             process {
                 """
-                input[0] = "${projectDir}/tests/test_resources/runfolder")
-                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock)"
+                input[0] = "${projectDir}/tests/test_resources/runfolder"
+                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
+                input[2] = ""
                 """
             }
         }
@@ -26,4 +23,22 @@ nextflow_process {
 
     }
 
+    test("Run ngs2counts with library-mapping.") {
+
+        when {
+            process {
+                """
+                input[0] = "${projectDir}/tests/test_resources/runfolder"
+                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
+                input[2] = "1=[1+2+4]"
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
 }
