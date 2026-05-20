@@ -13,6 +13,7 @@ env:
   NFT_DIFF: "pdiff"
   NFT_DIFF_ARGS: "--line-numbers --expand-tabs=2"
 
+jobs:
   test:
     name: Run nf-tests and pipeline
     runs-on: "ubuntu-24.10.2"

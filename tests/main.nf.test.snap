@@ -1,0 +1,82 @@
+{
+    "Run ngs2counts with library-mapping.": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "counts_1.csv:md5,305dbf66419f0246823a18b4b70908df",
+                        "counts_10.csv:md5,c967854407ddf7ddac779e373652f969",
+                        "counts_11.csv:md5,afc16b3b5ac28fffe2f4d9c8e545ad18",
+                        "counts_12.csv:md5,1c244417a7ddd6e07883fb8bbf3e3099",
+                        "counts_13.csv:md5,f3e5df46d53a2151d9113b34160b4c4a",
+                        "counts_14.csv:md5,17f50b21536b48bed3a18efa4370e733",
+                        "counts_15.csv:md5,87eceb264f6d5902acfe4ff5bb1b6385",
+                        "counts_16.csv:md5,be252a01e96b976f0627ade0621c4f59",
+                        "counts_2.csv:md5,78cdcd2cb0165c4071ba77b119c177aa",
+                        "counts_3.csv:md5,1037b935dc9fbcfae7bce5bc49173be7",
+                        "counts_4.csv:md5,783aabf5051bb56ac2215228d460e81a",
+                        "counts_5.csv:md5,d8be07c612b67130ce19b67f58afc96c",
+                        "counts_6.csv:md5,3f786e46299294232164324ce4d34bfa",
+                        "counts_7.csv:md5,99adc182c7019e582dbc80e8f66fc851",
+                        "counts_8.csv:md5,f046ab42cc68c12ab52ebc4d1d5e8a79",
+                        "counts_9.csv:md5,fd20fbbe2ee0730b485200357acac28c"
+                    ]
+                ],
+                "1": [
+                    "run_metadata.json:md5,2acab7c2479e57917311a5c59e40bed5"
+                ],
+                "2": [
+                    "ngs2counts_version.txt:md5,37e0acdc1d90343621be1848b1abd413"
+                ],
+                "3": [
+                    "ngs2counts_log.txt:md5,9a115ebc25a0a303b3ffee1a7437146d"
+                ]
+            }
+        ],
+        "timestamp": "2026-05-20T13:28:46.695445892",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.04.1"
+        }
+    },
+    "Run ngs2counts without library-mapping.": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "counts_1.csv:md5,305dbf66419f0246823a18b4b70908df",
+                        "counts_10.csv:md5,c967854407ddf7ddac779e373652f969",
+                        "counts_11.csv:md5,afc16b3b5ac28fffe2f4d9c8e545ad18",
+                        "counts_12.csv:md5,1c244417a7ddd6e07883fb8bbf3e3099",
+                        "counts_13.csv:md5,f3e5df46d53a2151d9113b34160b4c4a",
+                        "counts_14.csv:md5,17f50b21536b48bed3a18efa4370e733",
+                        "counts_15.csv:md5,87eceb264f6d5902acfe4ff5bb1b6385",
+                        "counts_16.csv:md5,be252a01e96b976f0627ade0621c4f59",
+                        "counts_2.csv:md5,78cdcd2cb0165c4071ba77b119c177aa",
+                        "counts_3.csv:md5,1037b935dc9fbcfae7bce5bc49173be7",
+                        "counts_4.csv:md5,783aabf5051bb56ac2215228d460e81a",
+                        "counts_5.csv:md5,d8be07c612b67130ce19b67f58afc96c",
+                        "counts_6.csv:md5,3f786e46299294232164324ce4d34bfa",
+                        "counts_7.csv:md5,99adc182c7019e582dbc80e8f66fc851",
+                        "counts_8.csv:md5,f046ab42cc68c12ab52ebc4d1d5e8a79",
+                        "counts_9.csv:md5,fd20fbbe2ee0730b485200357acac28c"
+                    ]
+                ],
+                "1": [
+                    "run_metadata.json:md5,2acab7c2479e57917311a5c59e40bed5"
+                ],
+                "2": [
+                    "ngs2counts_version.txt:md5,37e0acdc1d90343621be1848b1abd413"
+                ],
+                "3": [
+                    "ngs2counts_log.txt:md5,9a115ebc25a0a303b3ffee1a7437146d"
+                ]
+            }
+        ],
+        "timestamp": "2026-05-20T13:28:43.410175774",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.04.1"
+        }
+    }
+}
