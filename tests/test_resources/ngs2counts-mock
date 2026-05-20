@@ -9,22 +9,26 @@ if len(sys.argv) > 1 and sys.argv[1] in ("-V", "--version"):
     print(VERSION)
     sys.exit(0)
 
-if len(sys.argv) < 2:
-    sys.exit(1)
+print("log")
 
 runfolder = sys.argv[1]
 
 outdir = os.path.join(runfolder, "ngs2counts")
 os.makedirs(outdir, exist_ok=True)
 
-for i in range(1, 17):
-    fname = os.path.join(outdir, f"counts_{i}.csv")
-    with open(fname, "w") as f:
-        f.write(f"mock count file {i}\n")
+if "--library-mapping" in sys.argv:
+    for i in range(1, 9):
+        fname = os.path.join(outdir, f"counts_{i}.csv")
+        with open(fname, "w") as f:
+            f.write(f"mock library_mapping count file {i}\n")
+else:
+    for i in range(1, 17):
+        fname = os.path.join(outdir, f"counts_{i}.csv")
+        with open(fname, "w") as f:
+            f.write(f"mock count file {i}\n")
 
 metadata = {
-    "version": "ngs2counts-mock",
-    "files": 16
+    "version": "ngs2counts-mock"
 }
 
 with open(os.path.join(outdir, "run_metadata.json"), "w") as f:

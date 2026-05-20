@@ -9,6 +9,7 @@ process RUN_NGS2COUNTS {
         path "${input_folder}/ngs2counts/counts_*"
         path "${input_folder}/ngs2counts/run_metadata.json"
         path "${input_folder}/ngs2counts_version.txt"
+        path "${input_folder}/ngs2counts_log.txt"
 
     script:
     """
