@@ -13,7 +13,9 @@ export NGS2COUNTS_LOG="ngs2counts_log.txt"
 args=( "$RUNFOLDER" )
 
 if [[ -n "$LIBRARY_MAPPING" ]]; then
-    args+=( "--library-mapping" "$LIBRARY_MAPPING" )
+    args+=( "--library-mapping" "'$LIBRARY_MAPPING'" )
 fi
 
 "$NGS2COUNTS_EXECUTABLE" "${args[@]}" | tee "$RUNFOLDER/$NGS2COUNTS_LOG"
+
+echo "${args[@]}" > "$RUNFOLDER/$NGS2COUNTS_LOG"

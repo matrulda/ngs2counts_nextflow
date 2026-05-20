@@ -28,7 +28,7 @@ nextflow_process {
         when {
             process {
                 """
-                input[0] = "${projectDir}/tests/test_resources/runfolder"
+                input[0] = "${projectDir}/tests/test_resources/runfolder_mapping"
                 input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
                 input[2] = "1=[1+2+4]"
                 """

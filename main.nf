@@ -16,7 +16,7 @@ process RUN_NGS2COUNTS {
     run_ngs2counts.sh \
         $input_folder \
         $ngs2counts_executable \
-        ${ library_mapping ? "--library-mapping '${library_mapping}'" : "" }
+        ${ library_mapping ? "${library_mapping}" : "" }
     """
 }
 
