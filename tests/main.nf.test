@@ -30,7 +30,7 @@ nextflow_process {
                 """
                 input[0] = "${projectDir}/tests/test_resources/runfolder_mapping"
                 input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
-                input[2] = "1=[1+2+4]"
+                input[2] = "--library-mapping '1=[1+2+4]'"
                 """
             }
         }

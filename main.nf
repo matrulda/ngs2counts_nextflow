@@ -3,7 +3,7 @@ process RUN_NGS2COUNTS {
     input:
     path input_folder
     val ngs2counts_executable
-    val library_mapping
+    val ngs2counts_extra_args
 
     output:
         path "${input_folder}/ngs2counts/counts_*"
@@ -16,18 +16,18 @@ process RUN_NGS2COUNTS {
     run_ngs2counts.sh \
         $input_folder \
         $ngs2counts_executable \
-        ${ library_mapping ? "${library_mapping}" : "" }
+        ${ ngs2counts_extra_args ? "\"${ngs2counts_extra_args}\"" : "" }
     """
 }
 
 workflow {
     Channel
-    .value(params.library_mapping ?: "")
-    .set { ch_library_mapping }
+    .value(params.ngs2counts_extra_args ?: "")
+    .set { ch_ngs2counts_extra_args }
 
     RUN_NGS2COUNTS(
         file(params.input_folder),
         file(params.ngs2counts_executable),
-        ch_library_mapping
+        ch_ngs2counts_extra_args
     )
 }
