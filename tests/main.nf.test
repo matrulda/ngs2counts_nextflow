@@ -1,0 +1,63 @@
+nextflow_process {
+
+    name "Test Process RUN_NGS2COUNTS"
+    script "main.nf"
+    process "RUN_NGS2COUNTS"
+
+    test("Run ngs2counts without library-mapping.") {
+
+        when {
+            process {
+                """
+                input[0] = "${projectDir}/tests/test_resources/runfolder"
+                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
+                input[2] = ""
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+
+    test("Run ngs2counts with one extra argument.") {
+
+        when {
+            process {
+                """
+                input[0] = "${projectDir}/tests/test_resources/runfolder_mapping"
+                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
+                input[2] = "--library-mapping '1=[1+2+4]'"
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+
+    test("Run ngs2counts with two extra arguments.") {
+
+        when {
+            process {
+                """
+                input[0] = "${projectDir}/tests/test_resources/runfolder_2_extra_args"
+                input[1] = "${projectDir}/tests/test_resources/ngs2counts-mock"
+                input[2] = "--library-mapping '1=[1+2+4]' --output /test/test_resources/runfolder_2_extra_args"
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+}
