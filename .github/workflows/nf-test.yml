@@ -43,7 +43,15 @@ jobs:
         run: |
           nf-test test --ci
 
+      - name: Temporary step for troubleshooting
+        if: always()
+        run: |
+          ls -la .nf-test/tests
+          pwd
+          echo $GITHUB_WORKSPACE
+      
       - name: Save test output for troubleshooting
+        if: always()
         uses: actions/upload-artifact@v7
         with:
-          path: $GITHUB_WORKSPACE/.nf-test/tests
+          path: "${{ github.workspace}}/.nf-test/tests"
