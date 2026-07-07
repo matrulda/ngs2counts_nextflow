@@ -21,14 +21,14 @@
                     "ngs2counts_version.txt:md5,37e0acdc1d90343621be1848b1abd413"
                 ],
                 "3": [
-                    "ngs2counts_log.txt:md5,94f1882b779f79798d710c970e7a65af"
+                    "ngs2counts_log.txt:md5,1d196bce0e907ec6623d151e7f4ec349"
                 ]
             }
         ],
-        "timestamp": "2026-06-25T12:44:33.387385199",
+        "timestamp": "2026-07-07T13:13:17.88309751",
         "meta": {
             "nf-test": "0.9.4",
-            "nextflow": "25.10.2"
+            "nextflow": "26.04.4"
         }
     },
     "Run ngs2counts without library-mapping.": {
@@ -61,14 +61,14 @@
                     "ngs2counts_version.txt:md5,37e0acdc1d90343621be1848b1abd413"
                 ],
                 "3": [
-                    "ngs2counts_log.txt:md5,5b25441b03a1045aae85d6d048dbf573"
+                    "ngs2counts_log.txt:md5,9a115ebc25a0a303b3ffee1a7437146d"
                 ]
             }
         ],
-        "timestamp": "2026-06-25T12:44:30.301380315",
+        "timestamp": "2026-07-07T13:13:14.476017511",
         "meta": {
             "nf-test": "0.9.4",
-            "nextflow": "25.10.2"
+            "nextflow": "26.04.4"
         }
     },
     "Run ngs2counts with two extra arguments.": {
@@ -93,14 +93,14 @@
                     "ngs2counts_version.txt:md5,37e0acdc1d90343621be1848b1abd413"
                 ],
                 "3": [
-                    "ngs2counts_log.txt:md5,6ed8ed28710516fd86fc6a6f75aba52c"
+                    "ngs2counts_log.txt:md5,c74e6edd082deebab3fa9e61a65eb942"
                 ]
             }
         ],
-        "timestamp": "2026-06-25T12:56:50.01360866",
+        "timestamp": "2026-07-07T13:13:21.023779925",
         "meta": {
             "nf-test": "0.9.4",
-            "nextflow": "25.10.2"
+            "nextflow": "26.04.4"
         }
     }
 }
